@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Trouble in the Oasis – Gold 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="game" aria-label="Trouble in the Oasis game">
+        <div id="activity" class="activity">
+            <canvas id="desertSceneCanvas" width="1920" height="1080"
+                aria-label="Desert ecosystem CreateJS canvas"></canvas>
+            <div id="question" class="question">
+                <div class="question-shadow"></div>
+                <div class="question-face">
+                    <div class="question-audio">
+                        <img src="assets/images/speakee.png" alt="Speaker icon">
+                    </div>
+                    </button>
+                    <span id="questionText">Drag the non-living things<br>that
+                        you can find in the desert.</span>
+                </div>
+            </div>
+            <div class="controls"><button id="music" class="round blue" aria-label="Toggle sound">♫</button><button
+                    id="reset" class="round blue" aria-label="Restart">↻</button><button id="close" class="round red"
+                    aria-label="Exit">×</button></div>
+            <div id="tray" class="tray"><button id="previous" class="arrow" aria-label="Previous objects"><svg
+                        class="tray-arrow-icon" viewBox="0 0 80 86" aria-hidden="true" focusable="false">
+                        <g transform="translate(80 0) scale(-1 1)">
+                            <path d="M14 8 Q10 7 10 15 L10 75 Q10 82 17 79 L71 48 Q77 44 71 40 Z" fill="#111111"
+                                transform="translate(5 4)" />
+                            <path d="M14 8 Q10 7 10 15 L10 75 Q10 82 17 79 L71 48 Q77 44 71 40 Z" fill="#33cde9"
+                                stroke="#111111" stroke-width="2.6" stroke-linejoin="round" />
+                            <path d="M18 10 L18 76" fill="none" stroke="#e9fbff" stroke-width="3"
+                                stroke-linecap="round" />
+                            <path d="M22 11 L69 42 Q73 44 69 46 L22 74 Z" fill="#c5f3ff" stroke="#111111"
+                                stroke-width="2.5" stroke-linejoin="round" />
+                        </g>
+                    </svg></button>
+                <div class="tray-window" id="trayWindow">
+                    <div id="trayTrack" class="tray-track"></div>
+                </div><button id="next" class="arrow" aria-label="Next objects"><svg class="tray-arrow-icon"
+                        viewBox="0 0 80 86" aria-hidden="true" focusable="false">
+                        <g>
+                            <path d="M14 8 Q10 7 10 15 L10 75 Q10 82 17 79 L71 48 Q77 44 71 40 Z" fill="#111111"
+                                transform="translate(5 4)" />
+                            <path d="M14 8 Q10 7 10 15 L10 75 Q10 82 17 79 L71 48 Q77 44 71 40 Z" fill="#33cde9"
+                                stroke="#111111" stroke-width="2.6" stroke-linejoin="round" />
+                            <path d="M18 10 L18 76" fill="none" stroke="#e9fbff" stroke-width="3"
+                                stroke-linecap="round" />
+                            <path d="M22 11 L69 42 Q73 44 69 46 L22 74 Z" fill="#c5f3ff" stroke="#111111"
+                                stroke-width="2.5" stroke-linejoin="round" />
+                        </g>
+                    </svg></button>
+            </div>
+            <div id="toast" role="status" aria-live="polite"></div>
+        </div>
+        <div id="overlay" class="overlay">
+            <div class="dialog">
+                <h1 id="dialogTitle">Trouble in the Oasis</h1>
+                <p id="dialogText">Explore the desert! Drag the correct objects from the tray into the scene.</p>
+                <div class="dialog-buttons"><button id="primary" class="action">Start</button><button id="secondary"
+                        class="action alt" hidden>Cancel</button></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="js/assets.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/activities.js"></script>
+    <script src="js/dragDrop.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
